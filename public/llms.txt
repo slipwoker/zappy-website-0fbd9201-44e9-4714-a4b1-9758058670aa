@@ -1,0 +1,83 @@
+# Business — Generative Engine Optimization Map
+
+---
+
+## Pages
+
+### בית
+https://example.com
+DP STUDIO מציגה קולקציית פריטי דקורציה מבטון וריזין בעבודת יד — כל פריט חד-פעמי, מעוצב בסגנון מינימליסטי ואלגנטי. גלו את הקסם של עיצוב אמיתי.
+
+### אודות
+https://example.com/about
+מאחורי כל פריט של DP STUDIO עומדת אמנות אמיתית — גלו כיצד בטון וריזין הופכים לדקורציה יוקרתית בעבודת יד, עם אהבה לפרטים ותשוקה לעיצוב נקי ומרגש.
+
+### גלריה
+https://example.com/gallery
+הציצו לגלריה של DP STUDIO וגלו עולם של מגשי ריזין בעבודת יד, פסלים מבטון ופריטי דקורציה ייחודיים. כל תמונה היא הזמנה להביא יופי אמיתי אל הבית שלכם.
+
+### שאלות נפוצות
+https://example.com/faq
+יש לכם שאלות על פריטי הדקורציה מבטון וריזין של DP STUDIO? כאן תמצאו תשובות על חומרים, זמני אספקה, מתנות מיוחדות לבית ועוד — כדי שתוכלו להזמין בביטחון מלא.
+
+### צור קשר
+https://example.com/contact
+רוצים פריט דקורציה מיוחד בהזמנה אישית, מתנה ייחודית לבית או סתם להתייעץ? צרו קשר עם DP STUDIO ונעצב יחד את היצירה שתספר בדיוק את הסיפור שלכם.
+
+### Products
+https://example.com/products
+המוצרים שלנו - DP STUDIO
+
+### Cart
+https://example.com/cart
+עגלת הקניות שלך
+
+### Checkout
+https://example.com/checkout
+תשלום
+
+### Login
+https://example.com/login
+התחברות לקוחות
+
+### Account
+https://example.com/account
+החשבון שלי
+
+### Order Success
+https://example.com/order-success
+תודה על ההזמנה
+
+### Product Detail
+https://example.com/product/:slug
+פרטי המוצר - DP STUDIO
+
+### Category
+https://example.com/category/:slug
+מוצרים - DP STUDIO
+
+## Legal & Policy
+
+### Privacy Policy
+https://example.com/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://example.com/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://example.com/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About Business
+---
+
+# Additional Resources
+
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt
