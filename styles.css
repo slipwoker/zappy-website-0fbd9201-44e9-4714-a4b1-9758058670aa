@@ -3014,14 +3014,13 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   flex: 1;
 }
 
-/* ── Decorative Texture Tile ── */
 .index-benefits-section .index-benefits-deco-tile {
   position: absolute;
   inset-inline-start: -60px;
   top: 50%;
   transform: translateY(-50%);
   width: 140px;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
   opacity: 0.85;
 }
