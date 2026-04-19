@@ -223,18 +223,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="התחברות">
     <meta name="twitter:description" content="התחברות לקוחות">
-    <title data-i18n="login_page_title">התחברות - DP STUDIO</title>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <meta property="og:type" content="website">
+    <meta property="og:type" content="website">
   <meta property="og:locale" content="he_IL">
   
   
@@ -256,8 +245,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Iconify for cross-platform flag icons -->
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script><style id="zappy-multilang-css">
@@ -870,6 +857,8 @@ html[dir="rtl"] body {
   fbq('track', 'PageView');
 </script>
 <!-- ZAPPY_INTEGRATION_END analytics:add_facebook_pixel -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-dropdown-submenu-styles">
@@ -969,12 +958,12 @@ html[dir="rtl"] body {
   
     <div class="mobile-search-panel" id="mobile-search-panel">
       <div class="search-wrapper">
-        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off" data-i18n-placeholder="login_placeholder_71">
-        <button class="search-submit" id="mobile-search-submit" title="חיפוש" data-i18n-title="login_title_77">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
+        <button class="search-submit" id="mobile-search-submit" title="חיפוש">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
         </button>
         <button class="close-search" id="close-mobile-search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </button>
       </div>
       <div class="search-results" id="mobile-search-results"></div>
@@ -998,23 +987,29 @@ html[dir="rtl"] body {
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/dp-studio-logo.webp" alt="DP STUDIO" class="logo" data-i18n-alt="login_alt_75">
+        <img src="/assets/dp-studio-logo.webp" alt="DP STUDIO" class="logo" data-i18n-alt="home_alt_100">
       </a>
     </div><ul class="nav-menu" id="navMenu">
 
     <li class="menu-item-has-children zappy-products-dropdown">
-      <a href="/products" data-i18n="login_nav_64">
+      <a href="/products" data-i18n="home_nav_91">
         מוצרים
         <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M6 9l6 6 6-6"></path>
         </svg>
       </a>
       <ul class="sub-menu" id="zappy-nav-category-links">
-        <li><a href="/products" data-i18n="login_nav_65">כל המוצרים</a></li>
+        <li><a href="/products" data-i18n="home_nav_92">כל המוצרים</a></li>
         <!-- Categories will be loaded dynamically -->
       </ul>
     </li>
-  <li><a href="/about" data-i18n="login_nav_66">אודות</a></li><li><a href="/gallery" data-i18n="login_nav_67">גלריה</a></li><li><a href="/faq" data-i18n="login_nav_68">שאלות נפוצות</a></li><li><a href="/contact" data-i18n="login_nav_69">צור קשר</a></li></ul>
+  <li><a href="/about" data-i18n="home_nav_93">אודות</a></li><li><a href="/gallery" data-i18n="home_nav_94">גלריה</a></li><li><a href="/faq" data-i18n="home_nav_95">שאלות נפוצות</a></li><li><a href="/contact" data-i18n="home_nav_96">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-count">0</span></a><div class="nav-search-box">
+    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
+    <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    </button>
+    <div class="nav-search-results" id="nav-search-results"></div>
+  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button></div>
 <div class="lang-switcher" data-no-icon-edit="true" data-icon-color="#F8F4EE" style="position:relative;display:inline-flex;align-items:center;z-index:1000;margin:0 4px;">
   <button class="lang-switcher-current" aria-haspopup="true" aria-expanded="false" data-no-icon-edit="true" style="display:flex;align-items:center;padding:8px;background:transparent;border:none;border-radius:6px;cursor:pointer;color:inherit;">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;" data-no-icon-edit="true"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421-6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"></path></svg>
@@ -1023,13 +1018,7 @@ html[dir="rtl"] body {
     <button class="lang-option" data-lang="en" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;background:none;border:none;text-align:left;cursor:pointer;font-size:14px;color:#333;"><img src="https://api.iconify.design/circle-flags/us.svg" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border-radius:50%;"> English</button>
   </div>
 </div>
-<script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות" data-i18n-title="login_title_78"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות" data-i18n-title="login_title_79"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="cart-count">0</span></a><div class="nav-search-box">
-    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off" data-i18n-placeholder="login_placeholder_72">
-    <button class="nav-search-btn" id="nav-search-btn" title="חיפוש" data-i18n-title="login_title_80">
-      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
-    </button>
-    <div class="nav-search-results" id="nav-search-results"></div>
-  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש" data-i18n-title="login_title_81"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg></button></div></div>
+<script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script></div>
 
     
 
@@ -1038,7 +1027,7 @@ html[dir="rtl"] body {
 </nav>
 <nav class="zappy-catalog-menu rtl" id="zappy-catalog-menu" style="display:none">
       <div class="catalog-menu-container">
-        <a href="/products" class="catalog-menu-item catalog-menu-all" data-i18n="login_nav_70">כל המוצרים</a>
+        <a href="/products" class="catalog-menu-item catalog-menu-all" data-i18n="home_nav_97">כל המוצרים</a>
         <div class="catalog-menu-categories" id="zappy-category-links">
           <!-- Categories will be loaded dynamically -->
         </div>
@@ -1047,16 +1036,16 @@ html[dir="rtl"] body {
   <main class="page-container ecommerce-page">
     
         <section class="login-section">
-          <h1 data-i18n="login_h1_1">התחברות לקוחות</h1>
+          <h1>התחברות לקוחות</h1>
           <div class="login-form">
-            <p data-i18n="login_p_6">הזן את כתובת האימייל שלך ונשלח לך קוד התחברות</p>
-            <input type="email" placeholder="כתובת אימייל" id="login-email" required="" data-i18n-placeholder="login_placeholder_73">
-            <button class="btn btn-primary" id="send-otp-btn" data-i18n="login_btn_47">שלח קוד</button>
+            <p>הזן את כתובת האימייל שלך ונשלח לך קוד התחברות</p>
+            <input type="email" placeholder="כתובת אימייל" id="login-email" required>
+            <button class="btn btn-primary" id="send-otp-btn">שלח קוד</button>
           </div>
           <div class="otp-form" style="display: none;">
-            <p data-i18n="login_p_7">הזן את הקוד שנשלח לאימייל שלך</p>
-            <input type="text" placeholder="קוד אימות" id="otp-code" maxlength="6" data-i18n-placeholder="login_placeholder_74">
-            <button class="btn btn-primary" id="verify-otp-btn" data-i18n="login_btn_48">אמת</button>
+            <p>הזן את הקוד שנשלח לאימייל שלך</p>
+            <input type="text" placeholder="קוד אימות" id="otp-code" maxlength="6">
+            <button class="btn btn-primary" id="verify-otp-btn">אמת</button>
           </div>
         </section>
       
@@ -1068,9 +1057,9 @@ html[dir="rtl"] body {
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
         <div class="footer-logo-wrap">
-          <img src="/assets/dp-studio-logo.webp" alt="DP STUDIO" class="logo" data-i18n-alt="login_alt_76">
+          <img src="/assets/dp-studio-logo.webp" alt="DP STUDIO" class="logo" data-i18n-alt="home_alt_108">
         </div>
-        <p class="footer-tagline" data-i18n="login_p_8">עיצוב הבית ודקורציה בעבודת יד — חלל שמספר את הסיפור שלך.</p>
+        <p class="footer-tagline" data-i18n="home_p_31">עיצוב הבית ודקורציה בעבודת יד — חלל שמספר את הסיפור שלך.</p>
         <div class="footer-social">
           <a href="https://facebook.com/profile.php?id=61582250837222" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="https://instagram.com/dpstudio.decor" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -1080,46 +1069,46 @@ html[dir="rtl"] body {
 
       <!-- Column 2: Quick Links -->
       <div class="footer-col">
-        <h3 class="footer-heading" data-i18n="login_h3_3">ניווט מהיר</h3>
+        <h3 class="footer-heading" data-i18n="home_h3_15">ניווט מהיר</h3>
         <span class="footer-heading-line"></span>
         <ul class="footer-nav">
-          <li data-i18n="login_li_49"><a href="/about" data-i18n="login_link_28">אודות</a></li>
-          <li data-i18n="login_li_50"><a href="/gallery" data-i18n="login_link_29">גלריה</a></li>
-          <li data-i18n="login_li_51"><a href="/faq" data-i18n="login_link_30">שאלות נפוצות</a></li>
-          <li data-i18n="login_li_52"><a href="/contact" data-i18n="login_link_31">צור קשר</a></li>
+          <li data-i18n="home_li_75"><a href="/about" data-i18n="home_link_57">אודות</a></li>
+          <li data-i18n="home_li_76"><a href="/gallery" data-i18n="home_link_58">גלריה</a></li>
+          <li data-i18n="home_li_77"><a href="/faq" data-i18n="home_link_59">שאלות נפוצות</a></li>
+          <li data-i18n="home_li_78"><a href="/contact" data-i18n="home_link_60">צור קשר</a></li>
         </ul>
       </div>
 
       <!-- Column 3: Contact Info -->
       <div class="footer-col">
-        <h3 class="footer-heading" data-i18n="login_h3_4">יצירת קשר</h3>
+        <h3 class="footer-heading" data-i18n="home_h3_16">יצירת קשר</h3>
         <span class="footer-heading-line"></span>
         <ul class="footer-contact">
-          <li data-i18n="login_li_53">
+          <li data-i18n="home_li_79">
             <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-            <span class="contact-text"><a href="mailto:dpstudio.decor@gmail.com" data-i18n="login_link_32">dpstudio.decor@gmail.com</a></span>
+            <span class="contact-text"><a href="mailto:dpstudio.decor@gmail.com" data-i18n="home_link_61">dpstudio.decor@gmail.com</a></span>
           </li>
           <li>
             <span class="contact-icon"><i class="fas fa-phone"></i></span>
             <span class="contact-text"><a href="tel:0559342484">0559342484</a></span>
           </li>
-          <li data-i18n="login_li_54"><a href="/" data-i18n="login_link_33"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+          <li data-i18n="home_li_80"><a href="/" data-i18n="home_link_62"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
             <span class="contact-text">Israel</span></a></li>
         </ul>
       </div>
 
       <!-- Column 4: Studio Hours / Accent -->
       <div class="footer-col footer-hours">
-        <h3 class="footer-heading" data-i18n="login_h3_5">שעות פעילות</h3>
+        <h3 class="footer-heading" data-i18n="home_h3_17">שעות פעילות</h3>
         <span class="footer-heading-line"></span>
         <ul class="footer-hours-list">
-          <li data-i18n="login_li_55"><a href="/" data-i18n="login_link_34"><span class="hours-day">ראשון</span>&nbsp;<span class="hours-time">09:00 – 17:00</span></a></li>
-          <li data-i18n="login_li_56"><a href="/" data-i18n="login_link_35"><span class="hours-day">שני</span>&nbsp;<span class="hours-time">09:00 – 17:00</span></a></li>
-          <li data-i18n="login_li_57"><a href="/" data-i18n="login_link_36"><span class="hours-day">שלישי</span>&nbsp;<span class="hours-time">09:00 – 17:00</span></a></li>
-          <li data-i18n="login_li_58"><a href="/" data-i18n="login_link_37"><span class="hours-day">רביעי</span>&nbsp;<span class="hours-time">09:00 – 17:00</span></a></li>
-          <li data-i18n="login_li_59"><a href="/" data-i18n="login_link_38"><span class="hours-day">חמישי</span>&nbsp;<span class="hours-time">09:00 – 17:00</span></a></li>
-          <li data-i18n="login_li_60"><a href="/" data-i18n="login_link_39"><span class="hours-day">שישי</span>&nbsp;<span class="hours-time">סגור</span></a></li>
-          <li data-i18n="login_li_61"><a href="/" data-i18n="login_link_40"><span class="hours-day">שבת</span>&nbsp;<span class="hours-time">סגור</span></a></li>
+          <li data-i18n="home_li_81"><a href="/" data-i18n="home_link_63"><span class="hours-day">ראשון</span>&nbsp;<span class="hours-time">09:00 – 17:00</span></a></li>
+          <li data-i18n="home_li_82"><a href="/" data-i18n="home_link_64"><span class="hours-day">שני</span>&nbsp;<span class="hours-time">09:00 – 17:00</span></a></li>
+          <li data-i18n="home_li_83"><a href="/" data-i18n="home_link_65"><span class="hours-day">שלישי</span>&nbsp;<span class="hours-time">09:00 – 17:00</span></a></li>
+          <li data-i18n="home_li_84"><a href="/" data-i18n="home_link_66"><span class="hours-day">רביעי</span>&nbsp;<span class="hours-time">09:00 – 17:00</span></a></li>
+          <li data-i18n="home_li_85"><a href="/" data-i18n="home_link_67"><span class="hours-day">חמישי</span>&nbsp;<span class="hours-time">09:00 – 17:00</span></a></li>
+          <li data-i18n="home_li_86"><a href="/" data-i18n="home_link_68"><span class="hours-day">שישי</span>&nbsp;<span class="hours-time">סגור</span></a></li>
+          <li data-i18n="home_li_87"><a href="/" data-i18n="home_link_69"><span class="hours-day">שבת</span>&nbsp;<span class="hours-time">סגור</span></a></li>
         </ul>
       </div>
 
@@ -1129,18 +1118,18 @@ html[dir="rtl"] body {
   <!-- Bottom Bar -->
   <div class="footer-bottom">
     <div class="footer-container footer-bottom-inner">
-      <p class="footer-copy" data-i18n="login_p_9">© 2026 DP STUDIO. כל הזכויות שמורות.</p>
+      <p class="footer-copy" data-i18n="home_p_32">© 2026 DP STUDIO. כל הזכויות שמורות.</p>
       <div class="footer-legal">
-        <a href="/privacy" data-i18n="login_link_41">מדיניות פרטיות</a>
+        <a href="/privacy" data-i18n="home_link_70">מדיניות פרטיות</a>
         <span class="legal-sep"></span>
-        <a href="/terms" data-i18n="login_link_42">תנאי שימוש</a><span class="separator">|</span>
-            <a href="/return-policy" aria-label="מדיניות החזרות" data-i18n="login_link_43">
+        <a href="/terms" data-i18n="home_link_71">תנאי שימוש</a><span class="separator">|</span>
+            <a href="/return-policy" aria-label="מדיניות החזרות" data-i18n="home_link_72">
               מדיניות החזרות
             </a>
         <span class="legal-sep"></span>
-        <a href="/accessibility" data-i18n="login_link_44">נגישות</a>
+        <a href="/accessibility" data-i18n="home_link_73">נגישות</a>
         <span class="legal-sep"></span>
-        <a href="https://zappy5.com" target="_blank" class="zappy-attribution" data-i18n="login_link_45">נוצר באמצעות Zappy</a>
+        <a href="https://zappy5.com" target="_blank" class="zappy-attribution" data-i18n="home_link_74">נוצר באמצעות Zappy</a>
       </div>
     </div>
   </div>
@@ -1149,20 +1138,20 @@ html[dir="rtl"] body {
 <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
 <aside class="cart-drawer rtl" id="cart-drawer" dir="rtl">
   <div class="cart-drawer-header">
-    <h2 data-i18n="login_h2_2">עגלת הקניות שלך</h2>
+    <h2>עגלת הקניות שלך</h2>
     <button type="button" class="cart-drawer-close" id="cart-drawer-close" aria-label="סגור">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
   </div>
   <div class="cart-drawer-body" id="cart-drawer-items">
-    <div class="empty-cart" data-i18n="login_div_62">העגלה ריקה</div>
+    <div class="empty-cart">העגלה ריקה</div>
   </div>
   <div class="cart-drawer-footer">
-    <div class="cart-drawer-total" data-i18n="login_div_63">
+    <div class="cart-drawer-total">
       <span>סה"כ:</span>
       <span id="cart-drawer-total">₪0</span>
     </div>
-    <a href="/checkout" class="cart-drawer-checkout" data-i18n="login_link_46">המשך לתשלום</a>
+    <a href="/checkout" class="cart-drawer-checkout">המשך לתשלום</a>
   </div>
 </aside>
   <script>
