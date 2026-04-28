@@ -4453,50 +4453,114 @@ html[dir="rtl"] body {
   function updateContent() {
     // Newline character for detection
     var newlineChar = String.fromCharCode(10);
-    // HTML tag pattern for detection (common formatting tags)
-    var htmlTagPattern = /<(font|b|i|u|strong|em|span|br|a|sub|sup|mark|del|ins|s|small|big)[^>]*>/i;
+    // Structural tags we NEVER want pasted from a translation value. These are
+    // almost always decorative markup (chevron icons, accent bars) that the
+    // editor accidentally captured when saving inline edits; rendering them
+    // from the translation causes duplicated icons/pipes in the DOM.
+    var structuralTagPattern = /<(i|span|div|svg|img|picture|video|iframe|button|figure|section|article|aside|header|footer|nav|main|ul|ol|li|table|tr|td|th|h[1-6]|p)\b[^>]*>/i;
+    // Inline formatting we DO want to preserve when the user intentionally
+    // styled a phrase (bold, emphasis, line breaks, etc.).
+    var inlineFormatPattern = /<(font|b|u|strong|em|br|sub|sup|mark|del|ins|s|small|big|a)\b[^>]*>/i;
 
-    // Update text content - use innerHTML when text contains line breaks or HTML tags
+    function stripMarkup(value) {
+      if (typeof value !== 'string') return value;
+      var temp = document.createElement('div');
+      temp.innerHTML = value;
+      return temp.textContent || temp.innerText || '';
+    }
+
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
       var key = el.getAttribute('data-i18n');
       var translation = zappyI18n.t(key);
-      if (translation && translation !== key) {
-        // Skip parent elements whose children have their own data-i18n keys
-        // (e.g., <li data-i18n="key1"><a data-i18n="key2">text</a></li>)
-        // Setting textContent/innerHTML on the parent would destroy child elements.
-        if (el.querySelector('[data-i18n]')) return;
+      if (!translation || translation === key) return;
 
-        // Preserve child SVGs (e.g., decorative dropdown arrows in nav links)
-        // by only replacing direct text nodes instead of overwriting all content.
-        if (el.querySelector('svg')) {
+      // Skip parent elements whose children have their own data-i18n keys
+      // (e.g., <li data-i18n="key1"><a data-i18n="key2">text</a></li>)
+      // Setting textContent/innerHTML on the parent would destroy child elements.
+      if (el.querySelector('[data-i18n]')) return;
+
+      // Defensive sanitization: if the translation value contains structural
+      // markup (icons, accent spans, wrappers), strip it down to plain text.
+      // The decorative markup belongs in the HTML template, not in translation
+      // values — allowing it through causes accumulation bugs.
+      if (structuralTagPattern.test(translation)) {
+        translation = stripMarkup(translation);
+        if (!translation) return;
+      }
+
+      // If every child element is purely decorative (icons, SVGs, empty
+      // accent spans, <br>, media), replace only the direct text nodes and
+      // leave the decorative children in place. This keeps the update
+      // idempotent across repeated language switches.
+      //
+      // If ANY child element carries its own text (e.g. <strong>Company</strong>,
+      // <em>word</em>, <a>link</a>), we must NOT take that path — replacing
+      // only the direct text node would leave the child's stale text behind
+      // and produce mixed/duplicate content like
+      //   "Nombre de la Empresa 2024 Company".
+      // In that case we fall through to the innerHTML/textContent replacement
+      // below, which fully swaps the element's contents with the translation.
+      var hasChildElements = el.children.length > 0;
+      if (hasChildElements) {
+        var allDecorative = true;
+        for (var ci = 0; ci < el.children.length; ci++) {
+          var kid = el.children[ci];
+          // Inline SVG elements live in the SVG namespace, so their
+          // tagName is lowercase 'svg' in the browser DOM (unlike HTML
+          // elements which are uppercase). Accept both to stay defensive.
+          var kidTag = kid.tagName;
+          var isMediaOrBr = kidTag === 'SVG' || kidTag === 'svg' ||
+                            kidTag === 'IMG' || kidTag === 'PICTURE' ||
+                            kidTag === 'VIDEO' || kidTag === 'IFRAME' ||
+                            kidTag === 'BR';
+          if (!isMediaOrBr && kid.textContent.trim() !== '') {
+            allDecorative = false;
+            break;
+          }
+        }
+
+        if (allDecorative) {
           var nodes = el.childNodes;
           var textUpdated = false;
-          for (var i = 0; i < nodes.length; i++) {
-            if (nodes[i].nodeType === 3 && nodes[i].textContent.trim()) {
+          for (var ni = 0; ni < nodes.length; ni++) {
+            var node = nodes[ni];
+            if (node.nodeType === 3 && node.textContent.trim()) {
               if (!textUpdated) {
-                nodes[i].textContent = translation;
+                node.textContent = translation;
                 textUpdated = true;
               } else {
-                nodes[i].textContent = '';
+                node.textContent = '';
               }
             }
           }
-          if (!textUpdated) {
-            el.insertBefore(document.createTextNode(translation), el.firstChild);
+          if (textUpdated) return;
+
+          // No direct text node — insert one after the leading decoration.
+          var firstEl = el.firstElementChild;
+          var textNode = document.createTextNode(translation);
+          if (firstEl && firstEl.nextSibling) {
+            el.insertBefore(textNode, firstEl.nextSibling);
+          } else if (firstEl) {
+            el.appendChild(textNode);
+          } else {
+            el.insertBefore(textNode, el.firstChild);
           }
           return;
         }
+      }
 
-        var hasNewlines = translation.indexOf(newlineChar) !== -1;
-        var hasHtmlTags = htmlTagPattern.test(translation);
-        var hasEntities = /&[a-zA-Z]+;|&#\d+;|&#x[0-9a-fA-F]+;/.test(translation);
-        var elementHasBr = /<br\s*\/?>/i.test(el.innerHTML);
+      // Pure text element (or wrapper like <font>text</font>) — use innerHTML
+      // when the translation or existing markup contains line breaks / inline
+      // formatting so <br> and inline tags survive the swap.
+      var hasNewlines = translation.indexOf(newlineChar) !== -1;
+      var hasInlineFormat = inlineFormatPattern.test(translation);
+      var hasEntities = /&[a-zA-Z]+;|&#\d+;|&#x[0-9a-fA-F]+;/.test(translation);
+      var elementHasBr = /<br\s*\/?>/i.test(el.innerHTML);
 
-        if (hasNewlines || hasHtmlTags || hasEntities || elementHasBr) {
-          el.innerHTML = translation.split(newlineChar).join('<br>');
-        } else {
-          el.textContent = translation;
-        }
+      if (hasNewlines || hasInlineFormat || hasEntities || elementHasBr) {
+        el.innerHTML = translation.split(newlineChar).join('<br>');
+      } else {
+        el.textContent = translation;
       }
     });
 
@@ -4568,8 +4632,9 @@ html[dir="rtl"] body {
     
     // Update major content containers - only direction, NOT text-align
     // This preserves centered hero sections, titles, etc.
-    document.querySelectorAll('main, article, section, .content, .container, .wrapper').forEach(function(el) {
+    document.querySelectorAll('main, article, section, footer, aside, .content, .container, .wrapper').forEach(function(el) {
       el.style.direction = newDir;
+      if (el.hasAttribute('dir')) el.setAttribute('dir', newDir);
       // Do NOT set text-align - preserve original alignment (center, left, right)
     });
     
