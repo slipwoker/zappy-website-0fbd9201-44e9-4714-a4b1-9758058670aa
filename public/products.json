@@ -1,10 +1,37 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-12T03:58:18.714Z",
+  "generated_at": "2026-05-12T20:29:21.971Z",
   "base_url": "https://dpstudio.co.il",
   "currency": "ILS",
-  "count": 24,
+  "count": 25,
   "products": [
+    {
+      "id": "9e2b28d8-b303-4e97-bfc8-ebdb42465784",
+      "slug": "mgsh-avbly-arvk-btsba-shchvr-shysh-mavshn-copy-a2uqvc",
+      "name": "מגש אובלי ארוך בצבע שחור שיש מעושן (Copy)",
+      "name_translations": {
+        "en": "Long Oval Tray in Smoky Black Marble Color (Copy)",
+        "he": "מגש אובלי ארוך בצבע שחור שיש מעושן (Copy)"
+      },
+      "description": "<p><br></p><p>מגש אלגנטי בצבע שחור שיש בעבודת יד, בעיצוב מינימליסטי, נקי ועל-זמני שמשתלב בצורה מושלמת בכל חלל. הגוון השחור המעושן מעניק תחושת עומק, יוקרה ונוכחות, ומתאים לשולחן סלון, פינת אוכל, חדר שינה או כפלטת הגשה דקורטיבית.</p><p>המגש מיוצר בעבודת יד מחומר איכותי בגימור חלק ונעים למגע, עם תשומת לב לפרטים הקטנים. הצורה האובלית והעיצוב המדויק יוצרים מראה עדין אך מרשים, שמתאים לכל סגנון עיצוב – מודרני, קלאסי או טבעי.</p><p>📏 מידות: אורך 23 ס״מ | רוחב 9 ס״מ</p><p>ניתן להשתמש בו להנחת נרות, בשמים, תכשיטים או פריטים דקורטיביים – ולהוסיף טאץ’ ייחודי ומעוצב לכל פינה בבית.</p><p>✨ כל פריט מיוצר בעבודת יד ולכן הוא ייחודי לחלוטין</p><p>✨ ייתכנו הבדלים עדינים בגוון, בטקסטורה ובמראה בין פריט לפריט – וזה חלק מהקסם והאופי של המוצר</p><p>✔ צבע שחור שיש יוקרתי</p><p>✔ עבודת יד – כל פריט ייחודי</p><p>✔ מתאים לעיצוב הבית או כמתנה מיוחדת</p><p>✔ שימושי ודקורטיבי בו זמנית</p><p>פריט שמשלב אלגנטיות עמוקה עם נוכחות מרשימה – תוספת מושלמת לכל בית 🖤</p>",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 99,
+      "base_price": 99,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://dpstudio.co.il/assets/product-autofit-1778015733527-oqihm9.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://dpstudio.co.il/product/mgsh-avbly-arvk-btsba-shchvr-shysh-mavshn-copy-a2uqvc",
+      "categories": [
+        "מגשים"
+      ],
+      "updated_at": "2026-05-12T20:28:50.946Z"
+    },
     {
       "id": "8e849a5e-c427-424c-b53b-462a077d2a80",
       "slug": "agrtl-btsba-shchvr-f2u2xn",
@@ -567,7 +594,7 @@
       "categories": [
         "סטים"
       ],
-      "updated_at": "2026-05-12T03:57:42.934Z"
+      "updated_at": "2026-05-12T03:58:01.703Z"
     },
     {
       "id": "3f6acd58-a4c6-48ee-b05a-160dfebed343",
