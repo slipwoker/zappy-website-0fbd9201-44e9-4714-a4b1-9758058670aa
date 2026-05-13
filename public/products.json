@@ -1,10 +1,37 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-13T03:56:11.601Z",
+  "generated_at": "2026-05-13T03:57:17.065Z",
   "base_url": "https://dpstudio.co.il",
   "currency": "ILS",
-  "count": 25,
+  "count": 26,
   "products": [
+    {
+      "id": "6eb329ca-3880-46ff-af42-f285d96aae5c",
+      "slug": "st-mavtsb-lbn-chvm-mshvysh-copy-cazfns",
+      "name": "סט מעוצב לבן חום משויש (Copy)",
+      "name_translations": {
+        "en": "Designed White Brown Marble Set (Copy)",
+        "he": "סט מעוצב לבן חום משויש (Copy)"
+      },
+      "description": "<p>סט חום משויש בעבודת יד, בעיצוב חם, אלגנטי ומלא אופי, שמוסיף טאץ’ ייחודי ומרשים לכל חלל. הסט כולל מגש מעוצב, מחזיק לנרות זוגי ואגרטל עדין – שילוב מושלם לעיצוב שולחן, מדף או פינה מיוחדת בבית.</p><p>המראה המשויש מעניק לכל פריט עומק, תחכום ונוכחות, וכל סט מיוצר בעבודת יד תוך הקפדה על גימור איכותי ופרטים קטנים. בשל תהליך הייצור הידני, כל פריט הוא יחיד במינו וייתכנו הבדלים עדינים בדוגמת השיוש, בגוון ובטקסטורה – וזה חלק מהקסם שלו.</p><p>✔ עיצוב חם ואלגנטי</p><p> ✔ מראה משויש ייחודי</p><p> ✔ עבודת יד – כל פריט שונה ומיוחד</p><p> ✔ מתאים לעיצוב הבית או כמתנה מרשימה</p><p>סט שמשלב בין חמימות, יוקרה ועבודת יד – פריט דקורטיבי שמושך את העין ומשדר סטייל.</p>",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 189,
+      "base_price": 189,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://dpstudio.co.il/assets/product-autofit-1776191549277-cdkw6.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://dpstudio.co.il/product/st-mavtsb-lbn-chvm-mshvysh-copy-cazfns",
+      "categories": [
+        "סטים"
+      ],
+      "updated_at": "2026-05-13T03:56:46.207Z"
+    },
     {
       "id": "9e2b28d8-b303-4e97-bfc8-ebdb42465784",
       "slug": "mgsh-avbly-arvk-btsba-brvnzh-vshchvr-mavshn-cbhw0i",
