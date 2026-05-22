@@ -1,19 +1,19 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-22T12:05:59.514Z",
+  "generated_at": "2026-05-22T12:08:47.479Z",
   "base_url": "https://dpstudio.co.il",
   "currency": "ILS",
   "count": 27,
   "products": [
     {
       "id": "410c8dec-706e-4104-85d4-d61bc8f01baa",
-      "slug": "mgsh-avbly-arvk-btsba-brvnzh-vshchvr-mavshn-copy-p4363o",
-      "name": "מגש אובלי ארוך בצבע ברונזה ושחור מעושן  (Copy)",
+      "slug": "mgsh-avbly-arvk-btsba-mrbl-shysh-yvkrty-i4t3c6",
+      "name": "מגש אובלי ארוך בצבע מרבל שיש יוקרתי",
       "name_translations": {
-        "en": "Long Oval Tray in Bronze and Smoky Black (Copy)",
-        "he": "מגש אובלי ארוך בצבע ברונזה ושחור מעושן  (Copy)"
+        "en": "Long Oval Tray in Luxurious Marble Color",
+        "he": "מגש אובלי ארוך בצבע מרבל שיש יוקרתי"
       },
-      "description": "<p>מגש אלגנטי בעבודת יד בגימור שיש מעושן ייחודי, המשלב גווני שחור, לבן ונגיעות ברונזה טבעיות למראה יוקרתי ומרשים. כל מגש מיוצר בעבודת יד ולכן כל פריט הוא חד־פעמי עם דוגמה טבעית שונה ומיוחדת.</p><p>המגש מתאים לעיצוב שולחן סלון, חדר שינה או פינת נוי, ויכול לשמש להנחת נרות, בשמים, תכשיטים או פריטים דקורטיביים נוספים.</p><p>הגימור החלק והעיצוב המינימליסטי יוצרים שילוב מושלם בין מודרני, יוקרתי וטבעי – כזה שמשתלב בקלות בכל חלל בבית.</p><p>✨ עבודת יד</p><p>✨ כל פריט ייחודי</p><p>✨ מראה שיש יוקרתי</p><p>✨ מיוצר בישראל</p><p>📏 מידות:</p><p>אורך: 23 ס״מ</p><p>רוחב: 9 ס״מ</p><p>🖤 DP STUDIO – Handmade Decor</p>",
+      "description": "<p>מגש אלגנטי בעבודת יד בגימור Marble טבעי וייחודי, המשלב גווני שמנת, שחור, ברונזה ונגיעות ירקרקות עדינות למראה עמוק, יוקרתי ומרשים. כל מגש מיוצר בעבודת יד ולכן כל פריט הוא חד־פעמי, עם דוגמת מרבל טבעית ושונה המעניקה לו אופי ייחודי.</p><p>המגש מתאים לעיצוב שולחן סלון, חדר שינה, פינת נוי או חדר רחצה, ויכול לשמש להנחת נרות, בשמים, תכשיטים ואקססוריז דקורטיביים נוספים.</p><p>הגימור החלק והעיצוב המינימליסטי יוצרים שילוב מושלם בין מודרני, טבעי ויוקרתי — כזה שמשתלב בצורה מושלמת בכל חלל בבית.</p><p>✨ עבודת יד</p><p> ✨ כל פריט ייחודי</p><p> ✨ דוגמת Marble טבעית</p><p> ✨ מיוצר בישראל</p><p>📏 מידות:</p><p> אורך: 23 ס״מ</p><p> רוחב: 9 ס״מ</p><p><br></p>",
       "short_description": null,
       "sku": null,
       "brand": null,
@@ -22,15 +22,15 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://dpstudio.co.il/assets/product-ai-fit-1778618010439-42u9gq.webp"
+        "https://dpstudio.co.il/assets/product-ai-fit-1779451676965-f34ce.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://dpstudio.co.il/product/mgsh-avbly-arvk-btsba-brvnzh-vshchvr-mavshn-copy-p4363o",
+      "url": "https://dpstudio.co.il/product/mgsh-avbly-arvk-btsba-mrbl-shysh-yvkrty-i4t3c6",
       "categories": [
         "מגשים"
       ],
-      "updated_at": "2026-05-22T12:05:28.231Z"
+      "updated_at": "2026-05-22T12:08:16.097Z"
     },
     {
       "id": "6eb329ca-3880-46ff-af42-f285d96aae5c",
