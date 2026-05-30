@@ -1,10 +1,37 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-30T10:15:58.576Z",
+  "generated_at": "2026-05-30T20:22:26.825Z",
   "base_url": "https://dpstudio.co.il",
   "currency": "ILS",
-  "count": 29,
+  "count": 30,
   "products": [
+    {
+      "id": "0ea54cc8-ced5-4638-9645-9e661ae5818d",
+      "slug": "agrtl-mrbl-yychvdy-zjrftt",
+      "name": "אגרטל מרבל ייחודי ",
+      "name_translations": {
+        "en": "Unique Marble Vase",
+        "he": "אגרטל מרבל ייחודי "
+      },
+      "description": "<p>בהתאם לסגנון שאתם משתמשים בו באתר DPstudio:</p><p><br></p><p>אגרטל מרבל ורוד</p><p><br></p><p>אגרטל דקורטיבי בעבודת יד בעיצוב מרבל ייחודי המשלב גווני ורוד, לבן ושחור. כל פריט מיוצר בעבודת יד ולכן דוגמת המרבל משתנה מעט מאגרטל לאגרטל, מה שהופך כל אחד לייחודי ומיוחד.</p><p><br></p><p>האגרטל מתאים לעיצוב שולחן, מדף, פינת אירוח, משרד או כמתנה מקורית ומרשימה. משתלב בצורה מושלמת בסגנון עיצוב מודרני, מינימליסטי ואלגנטי.</p><p><br></p><p>✔ עבודת יד</p><p>✔ עיצוב מרבל ייחודי</p><p>✔ מתאים לפרחים יבשים</p><p>✔ פריט דקורטיבי מרשים לבית ולמשרד</p><p>✔ מיוצר בישראל</p><p><br></p><p>מידות:</p><p>גובה:  9 ס\"מ</p><p>קוטר:  5 ס\"מ</p><p><br></p><p>חומר:</p><p>חומר פולימרי איכותי</p><p><br></p><p>הערות:</p><p>כל פריט מיוצר בעבודת יד ולכן ייתכנו הבדלים קלים בגוונים ובדוגמת המרבל.</p><p><br></p>",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 79,
+      "base_price": 79,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://dpstudio.co.il/assets/product-ai-fit-1780172437686-fqz5ml.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://dpstudio.co.il/product/agrtl-mrbl-yychvdy-zjrftt",
+      "categories": [
+        "אגרטלים"
+      ],
+      "updated_at": "2026-05-30T20:21:55.661Z"
+    },
     {
       "id": "6b4f1a02-103e-40af-a11b-ec6920d0affa",
       "slug": "agrtl-amvd-mchvrts-btsba-lbn-klasy-6dtohh",
