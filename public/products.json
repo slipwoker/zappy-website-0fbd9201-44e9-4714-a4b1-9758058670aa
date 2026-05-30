@@ -1,19 +1,19 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-05-30T20:29:51.652Z",
+  "generated_at": "2026-05-30T20:33:51.597Z",
   "base_url": "https://dpstudio.co.il",
   "currency": "ILS",
-  "count": 32,
+  "count": 31,
   "products": [
     {
       "id": "a722ff18-df5d-4eff-8e6f-e1b60962e24f",
-      "slug": "agrtl-gavmtry-mrbl-rvz-copy-copy-5zkwqg",
-      "name": "אגרטל גאומטרי מרבל רוז (Copy) (Copy)",
+      "slug": "agrtl-gyavmtry-lbn-hyenrt",
+      "name": "אגרטל גיאומטרי לבן",
       "name_translations": {
-        "en": "Geometric Rose Marble Vase (Copy) (Copy)",
-        "he": "אגרטל גאומטרי מרבל רוז (Copy) (Copy)"
+        "en": "White Geometric Vase",
+        "he": "אגרטל גיאומטרי לבן"
       },
-      "description": "<p>בהתאם לסגנון שאתם משתמשים בו באתר DPstudio:</p><p><br></p><p>אגרטל מרבל ורוד</p><p><br></p><p>אגרטל דקורטיבי בעבודת יד בעיצוב מרבל ייחודי המשלב גווני ורוד, לבן ושחור. כל פריט מיוצר בעבודת יד ולכן דוגמת המרבל משתנה מעט מאגרטל לאגרטל, מה שהופך כל אחד לייחודי ומיוחד.</p><p><br></p><p>האגרטל מתאים לעיצוב שולחן, מדף, פינת אירוח, משרד או כמתנה מקורית ומרשימה. משתלב בצורה מושלמת בסגנון עיצוב מודרני, מינימליסטי ואלגנטי.</p><p><br></p><p>✔ עבודת יד</p><p>✔ עיצוב מרבל ייחודי</p><p>✔ מתאים לפרחים יבשים</p><p>✔ פריט דקורטיבי מרשים לבית ולמשרד</p><p>✔ מיוצר בישראל</p><p><br></p><p>מידות:</p><p>גובה: 9 ס\"מ</p><p>קוטר: 5 ס\"מ</p><p><br></p><p>חומר:</p><p>חומר פולימרי איכותי</p><p><br></p><p>הערות:</p><p>כל פריט מיוצר בעבודת יד ולכן ייתכנו הבדלים קלים בגוונים ובדוגמת המרבל.</p>",
+      "description": "<p>אגרטל גיאומטרי לבן</p><p>אגרטל דקורטיבי בעיצוב גיאומטרי מינימליסטי, המשלב קווים נקיים ופאות עדינות ליצירת מראה מודרני ואלגנטי. מיוצר בעבודת יד ומוסיף נגיעה ייחודית לכל חלל – סלון, פינת אוכל, משרד או חדר שינה.</p><p>העיצוב הנקי והנצחי משתלב בקלות במגוון סגנונות עיצוב, החל ממינימליסטי ונורדי ועד מודרני ויוקרתי. מתאים במיוחד לפרחים יבשים ולסידורי נוי עדינים.</p><p>✔ עבודת יד</p><p> ✔ עיצוב גיאומטרי מודרני</p><p> ✔ קווים נקיים ואלגנטיים</p><p> ✔ מתאים לפרחים יבשים</p><p> ✔ מיוצר בישראל</p><p> ✔ פריט דקורטיבי ייחודי</p><p><strong>חומר:</strong></p><p> חומר פולימרי איכותי</p><p><strong>מידות:</strong></p><p> גובה: כ 9 ס\"מ</p><p> קוטר: כ 5 ס\"מ</p><p><strong>הערות:</strong></p><p> כל פריט מיוצר בעבודת יד ולכן ייתכנו הבדלים קלים בגוון, במרקם ובגימור.</p><p><strong>DPstudio – עיצוב מינימליסטי בעבודת יד</strong></p><p> </p><p><br></p>",
       "short_description": null,
       "sku": null,
       "brand": null,
@@ -22,42 +22,15 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://dpstudio.co.il/assets/product-ai-fit-1780172437686-fqz5ml.webp"
+        "https://dpstudio.co.il/assets/product-ai-fit-1780173002422-p46qul.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://dpstudio.co.il/product/agrtl-gavmtry-mrbl-rvz-copy-copy-5zkwqg",
+      "url": "https://dpstudio.co.il/product/agrtl-gyavmtry-lbn-hyenrt",
       "categories": [
         "אגרטלים"
       ],
-      "updated_at": "2026-05-30T20:29:20.458Z"
-    },
-    {
-      "id": "db2e0af3-7e2d-4adb-a9d6-559b27ba79d5",
-      "slug": "agrtl-gavmtry-mrbl-rvz-copy-sbg03p",
-      "name": "אגרטל גאומטרי מרבל רוז (Copy)",
-      "name_translations": {
-        "en": "Geometric Rose Marble Vase (Copy)",
-        "he": "אגרטל גאומטרי מרבל רוז (Copy)"
-      },
-      "description": "<p>בהתאם לסגנון שאתם משתמשים בו באתר DPstudio:</p><p><br></p><p>אגרטל מרבל ורוד</p><p><br></p><p>אגרטל דקורטיבי בעבודת יד בעיצוב מרבל ייחודי המשלב גווני ורוד, לבן ושחור. כל פריט מיוצר בעבודת יד ולכן דוגמת המרבל משתנה מעט מאגרטל לאגרטל, מה שהופך כל אחד לייחודי ומיוחד.</p><p><br></p><p>האגרטל מתאים לעיצוב שולחן, מדף, פינת אירוח, משרד או כמתנה מקורית ומרשימה. משתלב בצורה מושלמת בסגנון עיצוב מודרני, מינימליסטי ואלגנטי.</p><p><br></p><p>✔ עבודת יד</p><p>✔ עיצוב מרבל ייחודי</p><p>✔ מתאים לפרחים יבשים</p><p>✔ פריט דקורטיבי מרשים לבית ולמשרד</p><p>✔ מיוצר בישראל</p><p><br></p><p>מידות:</p><p>גובה: 9 ס\"מ</p><p>קוטר: 5 ס\"מ</p><p><br></p><p>חומר:</p><p>חומר פולימרי איכותי</p><p><br></p><p>הערות:</p><p>כל פריט מיוצר בעבודת יד ולכן ייתכנו הבדלים קלים בגוונים ובדוגמת המרבל.</p>",
-      "short_description": null,
-      "sku": null,
-      "brand": null,
-      "price": 79,
-      "base_price": 79,
-      "sale_price": null,
-      "currency": "ILS",
-      "images": [
-        "https://dpstudio.co.il/assets/product-ai-fit-1780172437686-fqz5ml.webp"
-      ],
-      "in_stock": true,
-      "stock_status": "in_stock",
-      "url": "https://dpstudio.co.il/product/agrtl-gavmtry-mrbl-rvz-copy-sbg03p",
-      "categories": [
-        "אגרטלים"
-      ],
-      "updated_at": "2026-05-30T20:29:04.843Z"
+      "updated_at": "2026-05-30T20:32:55.094Z"
     },
     {
       "id": "0ea54cc8-ced5-4638-9645-9e661ae5818d",
