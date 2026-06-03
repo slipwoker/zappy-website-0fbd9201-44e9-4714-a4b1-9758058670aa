@@ -2078,10 +2078,10 @@ Etsy
 
 
 
-קראתי ואני מסכים/ה ל  תנאי השימוש  |
+קראתי ואני מסכים/ה ל תנאי השימוש  |
 
 מדיניות החזרות
-ול  מדיניות הפרטיות
+ול מדיניות הפרטיות
 
 
 
@@ -6092,7 +6092,7 @@ DP STUDIO מספקת עיצוב הבית ודקורציה דרך האתר. הש�
 ## Product Catalog
 
 ### מגש מרבל מדברי
-URL: https://dpstudio.co.il/product/mgsh-mrbl-mdbry-07xqst
+URL: https://dpstudio.co.il/product/mgsh-mrbl-mdbry-fmagmu
 Price: 99.00 ILS
 Availability: In stock
 

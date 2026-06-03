@@ -1,15 +1,18 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-03T20:22:44.070Z",
+  "generated_at": "2026-06-03T20:29:43.887Z",
   "base_url": "https://dpstudio.co.il",
   "currency": "ILS",
   "count": 32,
   "products": [
     {
       "id": "37e6b218-93a7-44ce-b87a-ae0a422b49c8",
-      "slug": "mgsh-mrbl-mdbry-07xqst",
+      "slug": "mgsh-mrbl-mdbry-fmagmu",
       "name": "מגש מרבל מדברי",
-      "name_translations": {},
+      "name_translations": {
+        "en": "Desert Marble Tray",
+        "he": "מגש מרבל מדברי"
+      },
       "description": "<p>מגש אובלי ארוך – מרבל מדברי</p><p><br></p><p>מגש אובלי בעבודת יד בעיצוב מרבל מדברי ייחודי, המשלב גווני לבן, אפור וחמרה היוצרים מראה טבעי ועשיר בהשראת שכבות אבן ונופי המדבר. כל מגש מיוצר בתהליך יציקה ידני, ולכן דוגמת המרבל משתנה מעט בין פריט לפריט ומעניקה לכל יצירה אופי ייחודי משלה.</p><p><br></p><p>העיצוב האלגנטי והנקי משתלב בקלות במגוון סגנונות עיצוב – מודרני, מינימליסטי, כפרי וסקנדינבי. המגש מתאים לשימוש דקורטיבי ולהצגת נרות, בשמים, תכשיטים, מפתחות, מוצרי טיפוח ופריטי נוי שונים.</p><p><br></p><p>המראה הטבעי והגוונים החמים הופכים אותו לפריט עיצוב מרשים, המוסיף תחושת חמימות וייחודיות לכל חלל בבית.</p><p><br></p><p>מידות: כ־23×9 ס\"מ</p><p>חומר: חומר פולימרי איכותי בגימור חלק ונעים למגע</p><p>ניקוי: באמצעות מטלית לחה בלבד</p><p><br></p><p>כל פריט מיוצר בעבודת יד ולכן ייתכנו שינויים קלים בגוון ובדוגמת המרבל.</p>",
       "short_description": null,
       "sku": null,
@@ -19,15 +22,15 @@
       "sale_price": null,
       "currency": "ILS",
       "images": [
-        "https://dpstudio.co.il/assets/product-ai-fit-1780518042794-9trfan.webp"
+        "https://dpstudio.co.il/assets/product-ai-fit-1780518524892-1yg6.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://dpstudio.co.il/product/mgsh-mrbl-mdbry-07xqst",
+      "url": "https://dpstudio.co.il/product/mgsh-mrbl-mdbry-fmagmu",
       "categories": [
         "מגשים"
       ],
-      "updated_at": "2026-06-03T20:22:01.114Z"
+      "updated_at": "2026-06-03T20:29:12.385Z"
     },
     {
       "id": "a722ff18-df5d-4eff-8e6f-e1b60962e24f",
