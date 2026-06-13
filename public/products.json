@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-13T19:59:26.217Z",
+  "generated_at": "2026-06-13T20:01:27.067Z",
   "base_url": "https://dpstudio.co.il",
   "currency": "ILS",
   "count": 34,
@@ -32,7 +32,7 @@
     },
     {
       "id": "e781ca8d-b410-4e5b-8dc0-ad305e37c014",
-      "slug": "mzvzh-dkvrtybyt-btsba-lbn-8pzzeg",
+      "slug": "mzvzh-dkvrtybyt-btsba-lbn-ma5kt9",
       "name": "מזוזה דקורטיבית בצבע לבן",
       "name_translations": {
         "en": "Decorative Mezuzah in White",
@@ -51,9 +51,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://dpstudio.co.il/product/mzvzh-dkvrtybyt-btsba-lbn-8pzzeg",
-      "categories": [],
-      "updated_at": "2026-06-13T19:53:24.385Z"
+      "url": "https://dpstudio.co.il/product/mzvzh-dkvrtybyt-btsba-lbn-ma5kt9",
+      "categories": [
+        "מזוזות"
+      ],
+      "updated_at": "2026-06-13T20:00:55.502Z"
     },
     {
       "id": "37e6b218-93a7-44ce-b87a-ae0a422b49c8",
