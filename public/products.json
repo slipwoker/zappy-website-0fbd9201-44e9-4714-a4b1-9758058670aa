@@ -1,10 +1,35 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-13T19:53:56.096Z",
+  "generated_at": "2026-06-13T19:59:26.217Z",
   "base_url": "https://dpstudio.co.il",
   "currency": "ILS",
-  "count": 33,
+  "count": 34,
   "products": [
+    {
+      "id": "f71addfe-6870-4ec0-b3e1-6e8099e44105",
+      "slug": "pmvty-shbt-shlvm-btsba-lbn-co50rd",
+      "name": "פמוטי שבת שלום בצבע לבן ",
+      "name_translations": {
+        "en": "Shabbat Shalom Candlesticks in White",
+        "he": "פמוטי שבת שלום בצבע לבן "
+      },
+      "description": "<p>פמוטי שבת שלום – זוג פמוטים מעוצבים</p><p><br></p><p>מידע קצר</p><p><br></p><p>זוג פמוטים דקורטיביים בעבודת יד עם הכיתוב המוטבע \"שבת שלום\", בעיצוב מינימליסטי ונקי המשתלב בצורה מושלמת בשולחן השבת ובכל חלל ביתי. שילוב של אלגנטיות, מסורת ועיצוב מודרני.</p><p><br></p><p>תכונות המוצר</p><p><br></p><p>עבודת יד</p><p><br></p><p>כיתוב מוטבע \"שבת שלום\"</p><p><br></p><p>עיצוב מודרני ונקי</p><p><br></p><p>גימור חלק ויוקרתי</p><p><br></p><p>מתאים לנרות שבת סטנדרטיים</p><p><br></p><p>פריט דקורטיבי ייחודי לבית או למתנה</p><p><br></p><p><br></p><p>חומר</p><p><br></p><p>חומר פולימרי איכותי בעבודת יד.</p><p><br></p><p>צבע</p><p><br></p><p>לבן קלאסי.</p><p><br></p><p><br></p><p>מה כולל הסט?</p><p><br></p><p>פמוט \"שבת\"</p><p><br></p><p>פמוט \"שלום\"</p><p><br></p><p><br></p><p>הערות</p><p><br></p><p>כל פריט מיוצר בעבודת יד ולכן ייתכנו הבדלים קלים בגוון, במרקם ובטקסטורה.</p><p><br></p><p>מומלץ להניח את הנר בתוך בית הנר המתאים ולא להשאיר נרות דולקים ללא השגחה.</p><p><br></p><p><br></p><p>מותג</p><p><br></p><p>DPstudio – Handmade Home Decor</p>",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 119,
+      "base_price": 119,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://dpstudio.co.il/assets/product-ai-fit-1781380700830-jxfma8.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://dpstudio.co.il/product/pmvty-shbt-shlvm-btsba-lbn-co50rd",
+      "categories": [],
+      "updated_at": "2026-06-13T19:58:55.027Z"
+    },
     {
       "id": "e781ca8d-b410-4e5b-8dc0-ad305e37c014",
       "slug": "mzvzh-dkvrtybyt-btsba-lbn-8pzzeg",
