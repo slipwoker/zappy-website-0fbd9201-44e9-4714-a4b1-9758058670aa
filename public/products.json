@@ -1,10 +1,35 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-13T19:43:45.735Z",
+  "generated_at": "2026-06-13T19:48:33.699Z",
   "base_url": "https://dpstudio.co.il",
   "currency": "ILS",
-  "count": 32,
+  "count": 33,
   "products": [
+    {
+      "id": "e781ca8d-b410-4e5b-8dc0-ad305e37c014",
+      "slug": "mzvzh-dkvrtybyt-btsba-lbn-6sqwmj",
+      "name": "מזוזה דקורטיבית בצבע לבן",
+      "name_translations": {
+        "en": "Decorative Mezuzah in White",
+        "he": "מזוזה דקורטיבית בצבע לבן"
+      },
+      "description": "<p>מזוזה דקורטיבית בעבודת יד בצבע לבן</p><p><br></p><p>מידע קצר</p><p><br></p><p>מזוזה מעוצבת בעבודת יד בסגנון מודרני ונקי, בעלת עיטור להבה עדין המשתלב בכל חלל. מיוצרת מחומר פולימרי איכותי בגימור חלק ויוקרתי, ומתאימה לבית, למשרד או כמתנה מיוחדת.</p><p><br></p><p>תכונות המוצר</p><p><br></p><p>עבודת יד</p><p><br></p><p>עיצוב מינימליסטי מודרני</p><p><br></p><p>גימור חלק ונעים למגע</p><p><br></p><p>קלה להתקנה</p><p><br></p><p>מתאימה למגוון סגנונות עיצוב</p><p><br></p><p>מיוצרת מחומר פולימרי איכותי</p><p><br></p><p><br></p><p>מידות</p><p><br></p><p>אורך: כ־19 ס\"מ</p><p><br></p><p>רוחב: כ־2.5 ס\"מ</p><p><br></p><p><br></p><p>(יש לעדכן לפי המידה המדויקת)</p><p><br></p><p>חומר</p><p><br></p><p>חומר פולימרי איכותי בעבודת יד.</p><p><br></p><p>צבע</p><p><br></p><p>לבן קלאסי.</p><p><br></p><p>הערות</p><p><br></p><p>כל פריט מיוצר בעבודת יד ולכן ייתכנו הבדלים קלים בגוון ובמרקם.</p><p><br></p><p>מיועד לשימוש דקורטיבי ופנימי.</p><p><br></p><p>הקלף אינו כלול !!!</p><p><br></p><p><br></p><p>מותג</p><p><br></p><p>DPstudio – Handmade Home Decor</p>",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 0,
+      "base_price": 0,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://dpstudio.co.il/assets/product-ai-fit-1781380047830-dusdc.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://dpstudio.co.il/product/mzvzh-dkvrtybyt-btsba-lbn-6sqwmj",
+      "categories": [],
+      "updated_at": "2026-06-13T19:48:00.635Z"
+    },
     {
       "id": "37e6b218-93a7-44ce-b87a-ae0a422b49c8",
       "slug": "mgsh-mrbl-mdbry-fmagmu",
