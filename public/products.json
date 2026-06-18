@@ -1,10 +1,37 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-13T20:03:49.050Z",
+  "generated_at": "2026-06-18T19:12:33.984Z",
   "base_url": "https://dpstudio.co.il",
   "currency": "ILS",
-  "count": 34,
+  "count": 35,
   "products": [
+    {
+      "id": "51a01f3c-aed2-474c-bb25-327ed4f18498",
+      "slug": "mgsh-agvl-dkvrtyby-lbn-scsvbu",
+      "name": " מגש עגול דקורטיבי לבן",
+      "name_translations": {
+        "en": "White Decorative Round Tray",
+        "he": " מגש עגול דקורטיבי לבן"
+      },
+      "description": "<p><strong>מגש עגול דקורטיבי לבן – עבודת יד</strong></p><p>מגש עגול אלגנטי בעיצוב נקי ומינימליסטי, מיוצר בעבודת יד מחומר פולימרי איכותי. מתאים לשימוש כמגש לנרות, בשמים, תכשיטים, מפיצי ריח ואביזרי נוי שונים, ומשתלב בצורה מושלמת בכל סגנון עיצוב.</p><p><strong>יתרונות המוצר</strong></p><ul><li>עבודת יד</li><li>עיצוב מודרני ונקי</li><li>גימור חלק ואיכותי</li><li>מתאים לעיצוב הבית והמשרד</li><li>פריט ייחודי בעבודת יד</li></ul><p><strong>חומר גלם</strong> חומר פולימרי איכותי.</p><p><strong>הוראות שימוש</strong> לניקוי באמצעות מטלית לחה בלבד. אין להשרות במים ואין להכניס למדיח כלים.</p><p><strong>מידות</strong> קוטר: כ-28 ס\"מ</p><p><strong>הערות</strong> כל מוצר מיוצר בעבודת יד ולכן ייתכנו שינויים קלים בגוון, במרקם ובמראה הסופי. אלו אינם פגמים אלא חלק מאופיו הייחודי של המוצר.</p>",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 159,
+      "base_price": 159,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [
+        "https://dpstudio.co.il/assets/product-1781809831276-4fdlt.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://dpstudio.co.il/product/mgsh-agvl-dkvrtyby-lbn-scsvbu",
+      "categories": [
+        "מגשים"
+      ],
+      "updated_at": "2026-06-18T19:11:56.084Z"
+    },
     {
       "id": "f71addfe-6870-4ec0-b3e1-6e8099e44105",
       "slug": "pmvty-shbt-shlvm-btsba-lbn-co50rd",
