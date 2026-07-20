@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://dpstudio.co.il</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il" />
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il" />
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/about</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/about" />
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/about</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/about" />
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/gallery</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/gallery" />
@@ -48,7 +48,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/gallery</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/gallery" />
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/faq</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/faq" />
@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/faq</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/faq" />
@@ -75,7 +75,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/contact</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/contact" />
@@ -84,7 +84,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/contact</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/contact" />
@@ -93,7 +93,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/products</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/products" />
@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/products</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/products" />
@@ -111,7 +111,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/cart</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/cart" />
@@ -120,7 +120,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/cart</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/cart" />
@@ -129,7 +129,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/checkout</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/checkout" />
@@ -138,7 +138,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/checkout</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/checkout" />
@@ -147,7 +147,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/login</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/login" />
@@ -156,7 +156,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/login</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/login" />
@@ -165,7 +165,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/account</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/account" />
@@ -174,7 +174,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/account</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/account" />
@@ -183,7 +183,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/order-success</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/order-success" />
@@ -192,7 +192,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/order-success</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/order-success" />
@@ -201,7 +201,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/product/:slug</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/product/:slug" />
@@ -210,7 +210,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/product/:slug</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/product/:slug" />
@@ -219,7 +219,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/category/:slug</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/category/:slug" />
@@ -228,7 +228,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/category/:slug</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/category/:slug" />
@@ -237,7 +237,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/privacy</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/privacy" />
@@ -246,7 +246,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/privacy</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/privacy" />
@@ -255,7 +255,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/terms</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/terms" />
@@ -264,7 +264,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/terms</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/terms" />
@@ -273,7 +273,7 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/accessibility</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/accessibility" />
@@ -282,12 +282,18 @@
   </url>
   <url>
     <loc>https://dpstudio.co.il/en/accessibility</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="he" href="https://dpstudio.co.il/accessibility" />
     <xhtml:link rel="alternate" hreflang="en" href="https://dpstudio.co.il/en/accessibility" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dpstudio.co.il/accessibility" />
+  </url>
+  <url>
+    <loc>https://dpstudio.co.il/product/st-mavtsb-btsba-lbn-copy-1umpat</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dpstudio.co.il/product/mgsh-agvl-dkvrtyby-lbn-scsvbu</loc>
