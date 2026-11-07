@@ -260,6 +260,100 @@
   } catch (e) {}
 })();
 
+/* zappy-announcement-message */
+
+/* ZAPPY_ANNOUNCEMENT_BAR_ROTATION_V4 */
+(function(){
+  if (window.__zappyAnnouncementBarRotationV4) return;
+  window.__zappyAnnouncementBarRotationV4 = true;
+  window.__zappyAnnouncementBarRotationV3 = true; // legacy guards
+  window.__zappyAnnouncementBarRotationV2 = true;
+
+  function readInterval(bar) {
+    var raw = bar && bar.getAttribute && bar.getAttribute('data-interval');
+    var ms = parseInt(raw, 10);
+    if (!isFinite(ms) || ms < 1000) ms = 4000;
+    return ms;
+  }
+
+  function remountMessages(bar) {
+    // Neutralize orphaned anonymous setIntervals from pre-V2 inline fallbacks
+    // that never stored their timer id — their NodeList closures keep ticking
+    // on the OLD nodes after we replace them with clones.
+    if (!bar) return;
+    var stale = bar.querySelectorAll('.zappy-announcement-message');
+    for (var s = 0; s < stale.length; s++) {
+      var node = stale[s];
+      if (!node || !node.parentNode) continue;
+      node.parentNode.replaceChild(node.cloneNode(true), node);
+    }
+  }
+
+  function startRotation(bar, intervalMs, force) {
+    if (!bar) return;
+    var ms = isFinite(intervalMs) && intervalMs >= 1000 ? intervalMs : readInterval(bar);
+    var messages = bar.querySelectorAll('.zappy-announcement-message');
+    if (messages.length <= 1) {
+      if (window.__zappyAnnouncementRotateTimer) {
+        clearInterval(window.__zappyAnnouncementRotateTimer);
+        window.__zappyAnnouncementRotateTimer = null;
+      }
+      window.__zappyAnnouncementRotateBar = null;
+      window.__zappyAnnouncementRotateMs = null;
+      return;
+    }
+    // Already driving this bar at this interval — leave the active slide alone.
+    if (
+      !force &&
+      window.__zappyAnnouncementRotateTimer &&
+      window.__zappyAnnouncementRotateBar === bar &&
+      window.__zappyAnnouncementRotateMs === ms
+    ) {
+      return;
+    }
+    if (window.__zappyAnnouncementRotateTimer) {
+      clearInterval(window.__zappyAnnouncementRotateTimer);
+      window.__zappyAnnouncementRotateTimer = null;
+    }
+    remountMessages(bar);
+    messages = bar.querySelectorAll('.zappy-announcement-message');
+    if (messages.length <= 1) return;
+    var current = 0;
+    for (var i = 0; i < messages.length; i++) {
+      if (i === 0) messages[i].classList.add('active');
+      else messages[i].classList.remove('active');
+    }
+    window.__zappyAnnouncementRotateBar = bar;
+    window.__zappyAnnouncementRotateMs = ms;
+    window.__zappyAnnouncementRotateTimer = setInterval(function() {
+      var all = bar.querySelectorAll('.zappy-announcement-message');
+      if (!all || all.length <= 1) return;
+      if (current >= all.length) current = 0;
+      all[current].classList.remove('active');
+      current = (current + 1) % all.length;
+      all[current].classList.add('active');
+    }, ms);
+  }
+
+  // Shared entry point — pass force:true after rebuilding message nodes.
+  window.zappyStartAnnouncementRotation = startRotation;
+
+  function boot() {
+    if (document.body && document.body.classList.contains('zappy-focused-page')) return;
+    var bar = document.querySelector('.zappy-announcement-bar');
+    if (!bar) return;
+    startRotation(bar, readInterval(bar), false);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+  // Settings fetch / dynamic bar create may land after first paint.
+  [300, 1000, 2500].forEach(function(ms){ setTimeout(boot, ms); });
+})();
+
 /* nav-menu navbar */
 
 
@@ -296,7 +390,7 @@
              flattened submenus used to set pointer-events:auto and re-enable
              hit-testing under an invisible More panel (hover 100px+ below
              still opened עוד). */
-          '.navbar .zappy-nav-more-item>.sub-menu{display:block!important;left:auto!important;right:0!important;min-width:200px!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateY(6px);transition:opacity .18s ease,visibility .18s ease,transform .18s ease;}' +
+          '.navbar .zappy-nav-more-item>.sub-menu{position:absolute!important;top:100%!important;z-index:100001!important;display:block!important;left:auto!important;right:0!important;min-width:200px!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateY(6px);transition:opacity .18s ease,visibility .18s ease,transform .18s ease;}' +
           /* Keep right:0 in RTL too. The old left:0 flip made the panel grow
              rightward over the nav links; on RTL More sits on the left of the
              item cluster so the panel must open left under עוד. */
@@ -818,10 +912,11 @@
   } catch (e) {}
 })();
 
-/* ZAPPY_NAV_MORE_POINTER_FIX_V4 */
+/* ZAPPY_NAV_MORE_POINTER_FIX_V5 */
 (function(){
   try {
-    if (window.__zappyNavMorePointerFixV4) return;
+    if (window.__zappyNavMorePointerFixV5) return;
+    window.__zappyNavMorePointerFixV5 = true;
     window.__zappyNavMorePointerFixV4 = true;
     window.__zappyNavMorePointerFixV3 = true;
     window.__zappyNavMorePointerFixV2 = true;
@@ -845,6 +940,7 @@
            + overflow-y:auto (which promotes overflow-x:auto) → horizontal
            scrollbar on long Hebrew nested titles. */
         'html body .navbar .zappy-nav-more-item > .sub-menu{' +
+          'position:absolute!important;top:100%!important;z-index:100001!important;' +
           'width:min(420px,calc(100vw - 24px))!important;max-width:min(420px,calc(100vw - 24px))!important;' +
           'overflow-x:hidden!important;overflow-y:auto!important;box-sizing:border-box!important;' +
         '}' +
@@ -996,8 +1092,415 @@
         attributeFilter: ['style', 'data-zappy-more-flattened']
       });
     }
+    // The overflow runtime may already have measured the in-flow panel and
+    // pinned the menu width. A resize re-runs that pass with the panel absolute.
+    try { window.dispatchEvent(new Event('resize')); } catch (e2) {}
   } catch (e) {}
 })();
+
+/* nav-menu mobile-toggle mobileToggle */
+
+
+/* ZAPPY_MOBILE_MENU_TOGGLE_V3 */
+(function(){
+  try {
+    function menuIsOpen(menu) {
+      return !!(menu && (
+        menu.classList.contains('active') ||
+        menu.classList.contains('open') ||
+        menu.style.display === 'block'
+      ));
+    }
+
+    function closeMenu(menu) {
+      if (!menu) return;
+      menu.classList.remove('active');
+      menu.classList.remove('open');
+      // removeProperty drops a display:none !important lock. Assigning ''
+      // does too in browsers, but a later setProperty(..., 'important')
+      // wins until something removes the property again.
+      if (menu.style && menu.style.removeProperty) menu.style.removeProperty('display');
+      else menu.style.display = '';
+    }
+
+    function setClosedIcons(toggle) {
+      if (!toggle) return;
+      toggle.classList.remove('active');
+      var hamburgerIcon = toggle.querySelector('.hamburger-icon');
+      var closeIcon = toggle.querySelector('.close-icon');
+      if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important');
+      if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important');
+    }
+
+    function setOpenIcons(toggle) {
+      if (!toggle) return;
+      toggle.classList.add('active');
+      var hamburgerIcon = toggle.querySelector('.hamburger-icon');
+      var closeIcon = toggle.querySelector('.close-icon');
+      if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'none', 'important');
+      if (closeIcon) closeIcon.style.setProperty('display', 'block', 'important');
+    }
+
+    function initMobileToggle() {
+      var toggle = document.querySelector('.mobile-toggle, #mobileToggle');
+      var navMenu = document.querySelector('#navMenu, .nav-menu, .navbar-menu');
+      if (!toggle || !navMenu) return;
+
+      // Skip if this toggle already has a click handler from the site's own JS
+      if (toggle.__zappyMobileToggleBound) return;
+      toggle.__zappyMobileToggleBound = true;
+
+      // Always start closed. A save while the overlay was open bakes
+      // .nav-menu.active into HTML; repairing icons alone leaves the panel up.
+      closeMenu(navMenu);
+      setClosedIcons(toggle);
+      document.body.style.overflow = '';
+
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (menuIsOpen(navMenu)) {
+          closeMenu(navMenu);
+          setClosedIcons(toggle);
+          document.body.style.overflow = '';
+        } else {
+          navMenu.classList.add('active');
+          navMenu.classList.remove('open');
+          navMenu.style.display = 'block';
+          setOpenIcons(toggle);
+          document.body.style.overflow = 'hidden';
+        }
+      }, true);
+
+      // Close on clicking outside
+      document.addEventListener('click', function(e) {
+        if (!menuIsOpen(navMenu)) return;
+        if (toggle.contains(e.target) || navMenu.contains(e.target)) return;
+        closeMenu(navMenu);
+        setClosedIcons(toggle);
+        document.body.style.overflow = '';
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && menuIsOpen(navMenu)) {
+          closeMenu(navMenu);
+          setClosedIcons(toggle);
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Close when clicking a nav link (navigating)
+      navMenu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          closeMenu(navMenu);
+          setClosedIcons(toggle);
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    function initPhoneButton() {
+      var phoneBtn = document.querySelector('.phone-header-btn');
+      if (!phoneBtn || phoneBtn.__zappyPhoneBound) return;
+      phoneBtn.__zappyPhoneBound = true;
+
+      phoneBtn.addEventListener('click', function() {
+        var phoneNumber = phoneBtn.getAttribute('data-phone') || null;
+
+        if (!phoneNumber) {
+          var telLinks = document.querySelectorAll('a[href^="tel:"]');
+          if (telLinks.length > 0) {
+            phoneNumber = telLinks[0].getAttribute('href').replace('tel:', '');
+          }
+        }
+
+        if (!phoneNumber) {
+          var allLinks = document.querySelectorAll('a[href]');
+          for (var i = 0; i < allLinks.length; i++) {
+            var h = allLinks[i].getAttribute('href') || '';
+            var cleaned = h.replace(/[-\s()]/g, '');
+            if (/^(\+?\d{9,15}|0\d{8,9})$/.test(cleaned)) {
+              phoneNumber = cleaned;
+              break;
+            }
+          }
+        }
+
+        if (phoneNumber && phoneNumber.indexOf('[') === -1) {
+          window.location.href = 'tel:' + phoneNumber;
+        }
+      });
+    }
+
+    // Saved hamburger workarounds call setProperty('display','none','important')
+    // on window load with no viewport check. That inline lock beats the
+    // desktop display:flex !important rule, so the links vanish above 768px.
+    // Those load listeners are often registered on DOMContentLoaded, which is
+    // after this IIFE, so a synchronous clear inside our own load listener
+    // runs too early. The timeout runs after every load listener in the turn.
+    // /* ZAPPY_DESKTOP_NAV_INLINE_HIDE_RELEASE */
+    var DESKTOP_INLINE_PROPS = ['display','visibility','opacity','position','top','left','right','bottom','width','height','max-height','overflow','overflow-y','z-index','background','padding','pointer-events'];
+
+    // null = could not read the hamburger (no getComputedStyle). Callers then
+    // fall back to the 769px query, which is correct for the stock navbar.
+    // A display:none leftover often sits before the control that is painted.
+    // display is not inherited: an inner .hamburger, or a toggle inside a
+    // display:none header, keeps its own display and must not count as shown.
+    var NAV_TOGGLE_SELECTOR = '.mobile-toggle, #mobileToggle, .menu-toggle, .hamburger, .navbar-toggle';
+    function toggleIsHidden(el) {
+      var node = el;
+      var own = true;
+      while (node && node !== document) {
+        if (node.nodeType && node.nodeType !== 1) break;
+        var cs = window.getComputedStyle(node);
+        if (!cs) return null;
+        if (cs.display === 'none') return true;
+        if (own && cs.visibility === 'hidden') return true;
+        own = false;
+        node = node.parentElement || null;
+      }
+      return false;
+    }
+    function hamburgerShown() {
+      try {
+        if (!window.getComputedStyle || !document.querySelectorAll) return null;
+        var toggles = document.querySelectorAll(NAV_TOGGLE_SELECTOR);
+        if (!toggles || !toggles.length) return false;
+        var readable = false;
+        for (var i = 0; i < toggles.length; i++) {
+          var hidden = toggleIsHidden(toggles[i]);
+          if (hidden === null) continue;
+          readable = true;
+          if (!hidden) return true;
+        }
+        return readable ? false : null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    // /* ZAPPY_NAV_MOBILE_FOLLOWS_HAMBURGER_V3 */
+    function isDesktopNav() {
+      var shown = hamburgerShown();
+      if (shown === true) return false;
+      if (shown === false) return true;
+      try {
+        return !!(window.matchMedia && window.matchMedia('(min-width: 769px)').matches);
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function syncNavMobileMode() {
+      try {
+        var root = document.documentElement;
+        if (root && root.classList) {
+          if (isDesktopNav()) root.classList.remove('zappy-nav-mobile');
+          else root.classList.add('zappy-nav-mobile');
+        }
+        if (!root || isDesktopNav()) return;
+        var nav = document.querySelector('.navbar, nav.navbar');
+        if (!nav || !nav.getBoundingClientRect || !root.style || !root.style.setProperty) return;
+        var rect = nav.getBoundingClientRect();
+        if (rect && rect.bottom > 0) {
+          root.style.setProperty('--zappy-navbar-bottom', Math.round(rect.bottom) + 'px');
+        }
+      } catch (e) {}
+    }
+
+    function ensureDrawerCss() {
+      try {
+        if (!document.getElementById || !document.createElement) return;
+        if (document.getElementById('zappy-nav-mobile-drawer')) return;
+        var style = document.createElement('style');
+        style.id = 'zappy-nav-mobile-drawer';
+        // Phone submenus open with a parent .open class or .mobile-expanded.
+        // The collapsed-submenu lock is only for the 769px gap, where the
+        // existing chevron runtime has stepped aside. An ID hide at every
+        // width beats .zappy-products-dropdown.open and
+        // .menu-item-has-children.open and leaves those dropdowns shut.
+        style.textContent = ''
+          + 'html.zappy-nav-mobile .navbar #navMenu.active,html.zappy-nav-mobile .navbar #navMenu.open,html.zappy-nav-mobile .navbar .nav-menu.active,html.zappy-nav-mobile .navbar .nav-menu.open{'
+          + 'position:fixed!important;top:var(--zappy-navbar-bottom,70px)!important;left:0!important;right:0!important;width:100%!important;max-width:100%!important;'
+          + 'height:calc(100dvh - var(--zappy-navbar-bottom,70px))!important;max-height:none!important;margin:0!important;padding:12px 0 32px!important;'
+          + 'display:block!important;flex-direction:column!important;flex-wrap:nowrap!important;overflow-x:hidden!important;overflow-y:auto!important;'
+          + 'z-index:10000!important;box-sizing:border-box!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:none!important}'
+          + 'html.zappy-nav-mobile .navbar #navMenu.active>li,html.zappy-nav-mobile .navbar #navMenu.open>li,html.zappy-nav-mobile .navbar .nav-menu.active>li,html.zappy-nav-mobile .navbar .nav-menu.open>li{'
+          + 'display:block!important;width:100%!important;max-width:100%!important;position:static!important;float:none!important;transform:none!important}'
+          + 'html.zappy-nav-mobile .navbar #navMenu.active>li>a,html.zappy-nav-mobile .navbar #navMenu.open>li>a,html.zappy-nav-mobile .navbar .nav-menu.active>li>a,html.zappy-nav-mobile .navbar .nav-menu.open>li>a{'
+          + 'display:block!important;width:100%!important;box-sizing:border-box!important;padding:14px 20px!important;white-space:normal!important}'
+          + 'html.zappy-nav-mobile .navbar #navMenu.active>li:has(>.sub-menu),html.zappy-nav-mobile .navbar .nav-menu.active>li:has(>.sub-menu){'
+          + 'display:flex!important;flex-wrap:wrap!important;align-items:center!important}'
+          + '@media (min-width: 769px){'
+          + 'html.zappy-nav-mobile .navbar #navMenu.active .sub-menu:not(.mobile-expanded),html.zappy-nav-mobile .navbar .nav-menu.active .sub-menu:not(.mobile-expanded){'
+          + 'display:none!important;visibility:hidden!important;opacity:0!important;position:static!important;height:0!important;max-height:0!important;overflow:hidden!important;pointer-events:none!important;transform:none!important}'
+          + '}'
+          + 'html.zappy-nav-mobile .navbar #navMenu.active .zappy-products-dropdown.open > .sub-menu,html.zappy-nav-mobile .navbar #navMenu.active .zappy-products-dropdown.open .sub-menu,html.zappy-nav-mobile .navbar #navMenu.active .menu-item-has-children.open > .sub-menu,html.zappy-nav-mobile .navbar .nav-menu.active .zappy-products-dropdown.open .sub-menu,html.zappy-nav-mobile .navbar .nav-menu.active .menu-item-has-children.open > .sub-menu{'
+          + 'display:block!important;visibility:visible!important;opacity:1!important;position:static!important;height:auto!important;max-height:none!important;overflow:visible!important;pointer-events:auto!important}'
+          + 'html.zappy-nav-mobile .navbar #navMenu.active .sub-menu.mobile-expanded,html.zappy-nav-mobile .navbar .nav-menu.active .sub-menu.mobile-expanded{'
+          + 'display:block!important;visibility:visible!important;opacity:1!important;position:static!important;height:auto!important;max-height:none!important;max-width:none!important;overflow:visible!important;pointer-events:auto!important;transform:none!important;width:100%!important;flex:0 0 100%!important;left:auto!important;right:auto!important;top:auto!important}'
+          + 'html.zappy-nav-mobile .navbar #navMenu.active>li>.mobile-submenu-toggle,html.zappy-nav-mobile .navbar .nav-menu.active>li>.mobile-submenu-toggle{'
+          + 'display:inline-flex!important;align-items:center!important;justify-content:center!important;width:44px!important;height:44px!important;border:0!important;background:transparent!important;color:inherit!important;cursor:pointer!important}';
+        var parent = document.head || document.documentElement;
+        if (!parent || !parent.appendChild) return;
+        parent.appendChild(style);
+      } catch (e) {}
+    }
+
+    // Between 769px and a site-raised hamburger breakpoint the storefront
+    // submenu runtime still thinks it is desktop and never builds chevrons.
+    // Only that gap is owned here; at <=768 the existing runtime keeps them.
+    function ensureGapSubmenuToggles() {
+      try {
+        var wide = false;
+        try {
+          wide = !!(window.matchMedia && window.matchMedia('(min-width: 769px)').matches);
+        } catch (e) {}
+        var existing = [];
+        if (document.querySelectorAll) {
+          existing = document.querySelectorAll('.mobile-submenu-toggle[data-zappy-runtime="nav-mobile"]');
+        }
+        if (isDesktopNav() || !wide) {
+          for (var r = 0; r < existing.length; r++) {
+            if (existing[r] && existing[r].parentNode) existing[r].parentNode.removeChild(existing[r]);
+          }
+          return;
+        }
+        if (!document.createElement || !document.querySelectorAll) return;
+        var items = document.querySelectorAll('#navMenu > li, .navbar .nav-menu > li');
+        for (var i = 0; i < items.length; i++) {
+          var item = items[i];
+          if (!item || !item.querySelector) continue;
+          var submenu = item.querySelector(':scope > .sub-menu') || item.querySelector('.sub-menu');
+          if (!submenu) continue;
+          if (item.querySelector(':scope > .mobile-submenu-toggle, :scope > .mobile-submenu-toggle')) continue;
+          if (item.querySelector('.mobile-submenu-toggle')) continue;
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'mobile-submenu-toggle';
+          btn.setAttribute('data-zappy-runtime', 'nav-mobile');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.setAttribute('aria-label', 'Open submenu');
+          btn.textContent = '\u25BE';
+          var link = item.querySelector(':scope > a, :scope > .menu-group-title') || item.querySelector('a');
+          if (link && link.parentNode === item && link.nextSibling) item.insertBefore(btn, link.nextSibling);
+          else item.appendChild(btn);
+        }
+      } catch (e) {}
+    }
+
+    function releaseDesktopNavInlineHide() {
+      if (!isDesktopNav() || !document.querySelectorAll) return;
+      var menus = document.querySelectorAll('#navMenu, .navbar .nav-menu, .navbar .navbar-menu');
+      for (var i = 0; i < menus.length; i++) {
+        var menu = menus[i];
+        if (!menu || !menu.style || !menu.style.getPropertyValue) continue;
+        var display = (menu.style.getPropertyValue('display') || '').replace(/^\s+|\s+$/g, '');
+        var position = (menu.style.getPropertyValue('position') || '').replace(/^\s+|\s+$/g, '');
+        if (display !== 'none' && display !== 'block' && position !== 'fixed') continue;
+        for (var p = 0; p < DESKTOP_INLINE_PROPS.length; p++) {
+          menu.style.removeProperty(DESKTOP_INLINE_PROPS[p]);
+        }
+      }
+    }
+
+    function isMobileNav() {
+      return !isDesktopNav();
+    }
+
+    // Merchant scripts stack several hamburger handlers and clone the button,
+    // so a listener on the node itself is gone by the time of the click and
+    // the survivors disagree (one paints the X, another locks display:none).
+    // A document capture listener registered while this file evaluates runs
+    // before those DOMContentLoaded handlers and is the only one that runs.
+    function bindMobileToggleCapture() {
+      if (window.__zappyMobileToggleCapture) return;
+      window.__zappyMobileToggleCapture = true;
+      document.addEventListener('click', function(e) {
+        if (!e || !e.target || !e.target.closest) return;
+        var subToggle = e.target.closest('.mobile-submenu-toggle');
+        if (subToggle && subToggle.getAttribute && subToggle.getAttribute('data-zappy-runtime') === 'nav-mobile') {
+          var owner = subToggle.parentNode;
+          var submenu = owner && owner.querySelector ? owner.querySelector('.sub-menu') : null;
+          if (!submenu || !submenu.classList) return;
+          if (e.preventDefault) e.preventDefault();
+          if (e.stopPropagation) e.stopPropagation();
+          var expanded = submenu.classList.contains('mobile-expanded');
+          if (expanded) submenu.classList.remove('mobile-expanded');
+          else submenu.classList.add('mobile-expanded');
+          if (subToggle.setAttribute) subToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          return;
+        }
+        syncNavMobileMode();
+        if (!isMobileNav()) return;
+        var toggle = e.target.closest(NAV_TOGGLE_SELECTOR);
+        if (!toggle) return;
+        var navMenu = document.querySelector('#navMenu, .navbar .nav-menu, .navbar .navbar-menu');
+        if (!navMenu) return;
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+
+        if (menuIsOpen(navMenu)) {
+          closeMenu(navMenu);
+          setClosedIcons(toggle);
+          if (toggle.setAttribute) toggle.setAttribute('aria-expanded', 'false');
+          if (document.body && document.body.style) document.body.style.overflow = '';
+        } else {
+          navMenu.classList.add('active');
+          navMenu.classList.remove('open');
+          if (navMenu.style && navMenu.style.setProperty) {
+            navMenu.style.setProperty('display', 'block', 'important');
+          } else {
+            navMenu.style.display = 'block';
+          }
+          setOpenIcons(toggle);
+          if (toggle.setAttribute) toggle.setAttribute('aria-expanded', 'true');
+          if (document.body && document.body.style) document.body.style.overflow = 'hidden';
+        }
+      }, true);
+    }
+
+    function armDesktopNavRelease() {
+      if (window.__zappyDesktopNavInlineHideRelease) return;
+      window.__zappyDesktopNavInlineHideRelease = true;
+      function afterLoadLocks() {
+        syncNavMobileMode();
+        releaseDesktopNavInlineHide();
+        ensureGapSubmenuToggles();
+        setTimeout(function() {
+          syncNavMobileMode();
+          releaseDesktopNavInlineHide();
+          ensureGapSubmenuToggles();
+        }, 0);
+      }
+      window.addEventListener('load', afterLoadLocks);
+      window.addEventListener('resize', afterLoadLocks);
+      if (document.readyState === 'complete') afterLoadLocks();
+    }
+
+    // Arm even when an older V3 already bound the hamburger. That copy
+    // returns before this release exists; a second append must still undo
+    // the desktop lock.
+    ensureDrawerCss();
+    bindMobileToggleCapture();
+    armDesktopNavRelease();
+
+    if (window.__zappyMobileMenuToggleInitV3) return;
+    window.__zappyMobileMenuToggleInitV3 = true;
+    window.__zappyMobileMenuToggleInit = true; // legacy guards
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() { initMobileToggle(); initPhoneButton(); }, { once: true });
+    } else {
+      initMobileToggle();
+      initPhoneButton();
+    }
+  } catch (e) {}
+})();
+/* END ZAPPY_MOBILE_MENU_TOGGLE */
 
 /* data-zappy-content-align */
 
