@@ -16881,6 +16881,24 @@ main,
 .nav-cta-btn { color: #FFFFFF !important; }
 /* === BUTTON TEXT OVERRIDES END === */
 
+
+.index-hero-section .index-hero-h1,
+.index-hero-section .index-hero-h1 em,
+.index-hero-section .index-hero-h1 i,
+.index-hero-section h1,
+.index-hero-section h2,
+.index-hero-section h3,
+.index-hero-section h4,
+.index-hero-section h5,
+.index-hero-section h6,
+.index-hero-section em,
+.index-hero-section i {
+  font-style: normal !important;
+}
+
+.index-hero-section .index-hero-h1 {
+  font-weight: 600 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
