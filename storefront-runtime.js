@@ -10689,6 +10689,100 @@ async function loadRelatedProducts(currentProduct, t) {
 }
 /* ==ZAPPY E-COMMERCE JS END== */
 
+/* ZAPPY_CUSTOM_JS_START:16aa20d8f1b8 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  if (window.__zappyPriceCurrencyFixApplied) return;
+  window.__zappyPriceCurrencyFixApplied = true;
+
+  function fixNode(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      var text = node.textContent;
+      if (text && text.indexOf('undefined') !== -1) {
+        node.textContent = text.replace(/undefined/g, '₪');
+      }
+      return;
+    }
+    if (node.nodeType !== Node.ELEMENT_NODE) return;
+    var tag = node.tagName ? node.tagName.toLowerCase() : '';
+    if (tag === 'script' || tag === 'style' || tag === 'noscript') return;
+    // Only descend into price containers when they exist, but scan everywhere (cheap enough)
+    var children = node.childNodes;
+    for (var i = 0; i < children.length; i++) {
+      fixNode(children[i]);
+    }
+  }
+
+  function fixAll() {
+    var targets = document.querySelectorAll('.price, .sale-price, .regular-price, .product-price, [class*="price"]');
+    if (targets.length) {
+      for (var i = 0; i < targets.length; i++) {
+        var el = targets[i];
+        // Handle direct text nodes
+        var childNodes = el.childNodes;
+        for (var j = 0; j < childNodes.length; j++) {
+          if (childNodes[j].nodeType === Node.TEXT_NODE && childNodes[j].textContent.indexOf('undefined') !== -1) {
+            childNodes[j].textContent = childNodes[j].textContent.replace(/undefined/g, '₪');
+          }
+        }
+        // Also fix whole textContent as fallback
+        if (el.textContent && el.textContent.indexOf('undefined') !== -1 && el.children.length === 0) {
+          el.textContent = el.textContent.replace(/undefined/g, '₪');
+        }
+      }
+    } else {
+      // Fallback: scan body text nodes
+      fixNode(document.body);
+    }
+  }
+
+  function run() {
+    try { fixAll(); } catch (e) {}
+  }
+
+  // Run on load and repeatedly for late-rendered dynamic content
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', run);
+  } else {
+    run();
+  }
+  window.addEventListener('load', run);
+  window.addEventListener('load', function () { setTimeout(run, 800); setTimeout(run, 2500); });
+
+  // Watch for dynamically inserted price nodes
+  if (window.MutationObserver) {
+    var obs = new MutationObserver(function () {
+      run();
+    });
+    var startObs = function () {
+      var host = document.getElementById('zappy-featured-products') ||
+                 document.getElementById('zappy-featured-categories') ||
+                 document.body;
+      if (host) {
+        obs.observe(host, { childList: true, subtree: true });
+      }
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', startObs);
+    } else {
+      startObs();
+    }
+  }
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:16aa20d8f1b8 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
