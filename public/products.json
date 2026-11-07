@@ -1,10 +1,37 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-11-07T20:18:35.721Z",
+  "generated_at": "2026-11-07T20:20:36.072Z",
   "base_url": "https://dpstudio.co.il",
   "currency": "ILS",
-  "count": 36,
+  "count": 37,
   "products": [
+    {
+      "id": "a105a302-ff6f-42ea-ad49-ff79921c0f3c",
+      "slug": "mchzyk-nrvt-zvgy-lkbvd-shbt-kvdsh-btsba-lbn-9llnfe",
+      "name": "מחזיק נרות זוגי לכבוד שבת קודש בצבע לבן",
+      "name_translations": {
+        "en": "Double Candleholder for Shabbat in White",
+        "he": "מחזיק נרות זוגי לכבוד שבת קודש בצבע לבן"
+      },
+      "description": "<p>מחזיק נרות זוגי בצבע לבן בעבודת יד, בעיצוב מלבני עם שני שקעים עגולים לנרות והכיתוב ״לכבוד שבת קודש״ במרכז. מתאים לשולחן השבת וכמתנה. ייתכנו הבדלים קלים בגוון ובגימור בין פריט לפריט.</p>",
+      "short_description": "מעמד לבן לשני נרות עם הכיתוב ״לכבוד שבת קודש״, בעבודת יד.",
+      "sku": null,
+      "brand": "DP STUDIO",
+      "price": 79,
+      "base_price": 109,
+      "sale_price": 79,
+      "currency": "ILS",
+      "images": [
+        "https://dpstudio.co.il/assets/product-1794082650094-7j7l8s.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://dpstudio.co.il/product/mchzyk-nrvt-zvgy-lkbvd-shbt-kvdsh-btsba-lbn-9llnfe",
+      "categories": [
+        "מחזיקי נרות"
+      ],
+      "updated_at": "2026-11-07T20:19:34.483Z"
+    },
     {
       "id": "84d85778-b208-42ff-af22-74201c601021",
       "slug": "st-mavtsb-3-dmvyvt-btsba-lbn-rfa6oi",
