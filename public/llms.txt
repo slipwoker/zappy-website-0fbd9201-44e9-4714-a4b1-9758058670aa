@@ -76,7 +76,16 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 37**
+**Total active products: 38**
+
+### חנוכייה קומפקטית לבנה בעבודת יד
+https://dpstudio.co.il/product/chnvkyyh-kvmpktyt-lbnh-babvdt-yd-jkdq1c
+- Price: 79.00 ILS (sale, was 109.00 ILS)
+- Availability: In stock
+- Category: מחזיקי נרות
+- Brand: DP STUDIO
+- Description: חנוכייה קומפקטית שלא תופסת הרבה מקום, בעבודת יד ישראלית מבית DP STUDIO. בעיצוב קשתות מעוגלות, שמש מוגבה במרכז ועיטור להבה עדין.
+- Image: https://dpstudio.co.il/assets/product-ai-fit-1794240316953-oxi8qr.webp
 
 ### מחזיק נרות זוגי לכבוד שבת קודש בצבע לבן
 https://dpstudio.co.il/product/mchzyk-nrvt-zvgy-lkbvd-shbt-kvdsh-btsba-lbn-9llnfe

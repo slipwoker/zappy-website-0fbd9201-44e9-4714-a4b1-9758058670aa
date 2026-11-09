@@ -1,10 +1,37 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-11-09T16:03:31.398Z",
+  "generated_at": "2026-11-09T16:06:22.652Z",
   "base_url": "https://dpstudio.co.il",
   "currency": "ILS",
-  "count": 37,
+  "count": 38,
   "products": [
+    {
+      "id": "52387861-687a-4c33-9dd0-f25c2e620cab",
+      "slug": "chnvkyyh-kvmpktyt-lbnh-babvdt-yd-jkdq1c",
+      "name": "חנוכייה קומפקטית לבנה בעבודת יד",
+      "name_translations": {
+        "en": "Handmade Compact White Hanukkah Menorah",
+        "he": "חנוכייה קומפקטית לבנה בעבודת יד"
+      },
+      "description": "<p>חנוכייה קומפקטית בעבודת יד מבית DP STUDIO, בעיצוב קשתות מעוגלות, שמש מוגבה במרכז ועיטור להבה עדין.</p><p></p><p>הגוון הלבן והעיצוב הנקי מוסיפים אור ואווירה חגיגית, במבנה קומפקטי שלא תופס הרבה מקום.</p><p></p><p>כל פריט מיוצר בעבודת יד בישראל, ולכן ייתכנו הבדלים קלים בגוון, במרקם ובגימור בין פריט לפריט.</p>",
+      "short_description": "חנוכייה קומפקטית שלא תופסת הרבה מקום, בעבודת יד ישראלית מבית DP STUDIO. בעיצוב קשתות מעוגלות, שמש מוגבה במרכז ועיטור להבה עדין.",
+      "sku": null,
+      "brand": "DP STUDIO",
+      "price": 79,
+      "base_price": 109,
+      "sale_price": 79,
+      "currency": "ILS",
+      "images": [
+        "https://dpstudio.co.il/assets/product-ai-fit-1794240316953-oxi8qr.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://dpstudio.co.il/product/chnvkyyh-kvmpktyt-lbnh-babvdt-yd-jkdq1c",
+      "categories": [
+        "מחזיקי נרות"
+      ],
+      "updated_at": "2026-11-09T16:05:49.961Z"
+    },
     {
       "id": "a105a302-ff6f-42ea-ad49-ff79921c0f3c",
       "slug": "mchzyk-nrvt-zvgy-lkbvd-shbt-kvdsh-btsba-lbn-9llnfe",
